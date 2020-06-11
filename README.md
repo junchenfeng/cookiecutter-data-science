@@ -60,12 +60,18 @@ The directory structure of your new project looks like this:
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── Pipfile            <- use pipenv to manage python environment
+│
+├── .gitlab.yml        <- ci integreation script, use any flavor you like
 │
 ├── src                <- Source code for use in this project.
 │   ├── __init__.py    <- Makes src a Python module
 │   │
+│   ├── tests          <- code for continuous integration test
+│   │   |
+│   │   └── test_ci.py
+│   │   └── test_unittest.py
+|   |
 │   ├── data           <- Scripts to download or generate data
 │   │   └── make_dataset.py
 │   │
@@ -80,7 +86,7 @@ The directory structure of your new project looks like this:
 │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
 │       └── visualize.py
 │
-└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+└── .coveragerc        <- use vanilla coverage  
 ```
 
 ## Contributing

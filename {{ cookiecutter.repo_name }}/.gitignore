@@ -42,6 +42,12 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
+coverage-reports/
+cover/
+
+# sonarqube
+.scannerwork/
+
 
 # Translations
 *.mo
@@ -79,7 +85,7 @@ target/
 /data/
 
 # Mac OS-specific storage files
-.DS_Store
+*.DS_Store
 
 # vim
 *.swp
@@ -87,3 +93,6 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# misc
+*.zip
