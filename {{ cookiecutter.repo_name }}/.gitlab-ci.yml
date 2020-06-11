@@ -1,0 +1,19 @@
+stages:
+  - build
+  - test
+
+buildStage:
+  stage: build
+  before_script:
+    - echo "start building"
+  script:
+    - make build_env  # ci test should use production server
+
+
+testStage:
+  stage: test
+  script:
+    - make citest
+
+
+

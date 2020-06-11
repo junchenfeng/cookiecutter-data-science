@@ -1,0 +1,13 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+
+[packages]
+mkdocs = "*"
+mkdocs-cinder = "*"
+cookiecutter = "*"
+pytest = "*"
+
+[requires]
+python_version = "3"
