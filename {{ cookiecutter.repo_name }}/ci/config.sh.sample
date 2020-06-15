@@ -1,0 +1,5 @@
+sonar_host=http://sonar.your_domain
+sonar_login_token=some_specific_token_here
+
+new_coverage_threshold=a_number_between_0-100
+total_coverage_threshold=a_number_between_0-100

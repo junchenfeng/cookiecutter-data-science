@@ -30,6 +30,11 @@ clean:
 fmt:
 	black src/
 
+citest:
+	pipenv run coverage run -m unittest discover tests
+	pipenv run coverage report
+	pipenv run coverage xml -o coverage-reports/coverage.xml
+
 
 #################################################################################
 # PROJECT RULES                                                                 #

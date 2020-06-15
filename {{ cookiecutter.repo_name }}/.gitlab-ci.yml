@@ -1,6 +1,12 @@
 stages:
+  - lint
   - build
   - test
+
+lintStage:
+  stage: lint
+  script:
+    - sh ci/soanr_lint.sh
 
 buildStage:
   stage: build
@@ -14,6 +20,4 @@ testStage:
   stage: test
   script:
     - make citest
-
-
-
+    - sh ci/coverage_report.sh
