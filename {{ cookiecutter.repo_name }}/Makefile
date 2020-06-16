@@ -18,7 +18,7 @@ build_dev_env:
 
 ## Install Python Dependencies for deployment
 build_env:
-	pipenv install
+	pipenv install --skip-lock
 
 
 ## Delete all compiled Python files

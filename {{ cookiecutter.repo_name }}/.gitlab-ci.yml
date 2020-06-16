@@ -7,6 +7,8 @@ lintStage:
   stage: lint
   script:
     - sh ci/soanr_lint.sh
+  tags:
+    - data-science
 
 buildStage:
   stage: build
@@ -14,6 +16,8 @@ buildStage:
     - echo "start building"
   script:
     - make build_env  # ci test should use production server
+  tags:
+    - data-science
 
 
 testStage:
@@ -21,3 +25,5 @@ testStage:
   script:
     - make citest
     - sh ci/coverage_report.sh
+  tags:
+    - data-science

@@ -3,12 +3,11 @@ name = "pypi"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 verify_ssl = true
 
-[dev-packages]
-diff-cover = "*"
-coverage = "*"
-black = "*"  # black cannot use Pipfile.lock
+[dev-packages]black = "*"  # black cannot use Pipfile.lock
 
 [packages]
+diff-cover = "*"
+coverage = "*"
 luigi = "*"  # recommend for task flow, airflow is another alternative
 
 [requires]
