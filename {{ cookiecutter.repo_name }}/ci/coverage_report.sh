@@ -12,7 +12,7 @@ fi
 new_coverage_ratio=$(pipenv run diff-cover $COVERAGE_REPORT_FILE | grep -E 'Coverage:' | sed -e 's/[^0-9]//g')
 echo "$new_coverage_ratio"
 
-total_coverage_ratio=$(egrep 'line-rate="(1|0\.[0-9]+)"' $COVERAGE_REPORT_FILE | head -1 | sed -nE 's/^.+line-rate="((1)|0\.([0-9]{2})).+$/\1/p')
+total_coverage_ratio=$(grep -oE 'line-rate="(1|0\.[0-9]+)"' $COVERAGE_REPORT_FILE | head -1 | grep -oP '[0-9]+(?=")')
 echo "$total_coverage_ratio"
 
 if [[ (-z "$new_coverage_ratio" || $new_coverage_ratio -gt $new_coverage_threshold)  && ($total_coverage_ratio -eq 1 || $total_coverage_ratio -ge $total_coverage_threshold) ]]
