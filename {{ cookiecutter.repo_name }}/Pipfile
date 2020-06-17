@@ -3,7 +3,8 @@ name = "pypi"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 verify_ssl = true
 
-[dev-packages]black = "*"  # black cannot use Pipfile.lock
+[dev-packages]
+black = "*"  # black cannot use Pipfile.lock
 
 [packages]
 diff-cover = "*"
