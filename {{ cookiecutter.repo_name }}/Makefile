@@ -18,7 +18,7 @@ build_dev_env:
 
 ## Install Python Dependencies for deployment
 build_env:
-	pipenv install
+	pipenv install --skip-lock
 
 
 ## Delete all compiled Python files
@@ -29,6 +29,11 @@ clean:
 ## Lint using black
 fmt:
 	black src/
+
+citest:
+	pipenv run coverage run -m unittest discover tests
+	pipenv run coverage report
+	pipenv run coverage xml -o coverage-reports/coverage.xml
 
 
 #################################################################################

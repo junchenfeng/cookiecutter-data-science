@@ -1,0 +1,13 @@
+if [[ -z "$(pipenv --venv)" ]];
+then
+  echo "Plz create a virtualenv first with pipenv."
+  exit 1
+fi
+
+echo "Start format"
+black_res=$(pipenv run python -m black . 2>&1 | grep "reformatted")
+if [[ -n "$black_res" ]];then
+  echo "有文件被black格式化，请手动使用git add"
+  exit 1
+fi
+echo "Done"
